@@ -1,0 +1,130 @@
+import turtle
+
+def draw_rectangle(t, x, y, width, height, color):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.color(color)
+    t.begin_fill()
+    for _ in range(2):
+        t.forward(width)
+        t.right(90)
+        t.forward(height)
+        t.right(90)
+    t.end_fill()
+
+def draw_triangle(t, points, color):
+    t.penup()
+    t.goto(points[0])
+    t.pendown()
+    t.color(color)
+    t.begin_fill()
+    t.goto(points[1])
+    t.goto(points[2])
+    t.goto(points[0])
+    t.end_fill()
+
+def draw_palestine_flag():
+    screen = turtle.Screen()
+    screen.title("Flag of Palestine")
+    screen.setup(width=600, height=360)
+    screen.bgcolor("white")
+
+    flag_width = 500
+    flag_height = 300
+    stripe_height = flag_height / 3
+
+    t = turtle.Turtle()
+    t.speed(0)
+    t.hideturtle()
+
+    # Starting top-left corner of flag
+    x0 = -flag_width / 2
+    y0 = flag_height / 2
+
+    # Draw the black stripe (top)
+    draw_rectangle(t, x0, y0, flag_width, stripe_height, "black")
+
+    # Draw the white stripe (middle)
+    draw_rectangle(t, x0, y0 - stripe_height, flag_width, stripe_height, "white")
+
+    # Draw the green stripe (bottom)
+    draw_rectangle(t, x0, y0 - 2 * stripe_height, flag_width, stripe_height, "green")
+
+    # Draw the red triangle on the hoist side
+    triangle_points = [
+        (x0, y0),                             # top-left
+        (x0 + flag_width * 0.4, 0),           # midpoint inwards
+        (x0, y0 - flag_height)                # bottom-left
+    ]
+    draw_triangle(t, triangle_points, "red")
+
+    turtle.done()
+
+if __name__ == "__main__":
+    draw_palestine_flag()
+import turtle
+
+def draw_rectangle(t, x, y, width, height, color):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+    t.color(color)
+    t.begin_fill()
+    for _ in range(2):
+        t.forward(width)
+        t.right(90)
+        t.forward(height)
+        t.right(90)
+    t.end_fill()
+
+def draw_triangle(t, points, color):
+    t.penup()
+    t.goto(points[0])
+    t.pendown()
+    t.color(color)
+    t.begin_fill()
+    t.goto(points[1])
+    t.goto(points[2])
+    t.goto(points[0])
+    t.end_fill()
+
+def draw_palestine_flag():
+    screen = turtle.Screen()
+    screen.title("Flag of Palestine")
+    screen.setup(width=600, height=360)
+    screen.bgcolor("white")
+
+    flag_width = 500
+    flag_height = 300
+    stripe_height = flag_height / 3
+
+    t = turtle.Turtle()
+    t.speed(0)
+    t.hideturtle()
+
+    # Starting top-left corner of flag
+    x0 = -flag_width / 2
+    y0 = flag_height / 2
+
+    # Draw the black stripe (top)
+    draw_rectangle(t, x0, y0, flag_width, stripe_height, "black")
+
+    # Draw the white stripe (middle)
+    draw_rectangle(t, x0, y0 - stripe_height, flag_width, stripe_height, "white")
+
+    # Draw the green stripe (bottom)
+    draw_rectangle(t, x0, y0 - 2 * stripe_height, flag_width, stripe_height, "green")
+
+    # Draw the red triangle on the hoist side
+    triangle_points = [
+        (x0, y0),                             # top-left
+        (x0 + flag_width * 0.4, 0),           # midpoint inwards
+        (x0, y0 - flag_height)                # bottom-left
+    ]
+    draw_triangle(t, triangle_points, "red")
+
+    turtle.done()
+
+if __name__ == "__main__":
+    draw_palestine_flag()

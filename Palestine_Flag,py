@@ -1,5 +1,4 @@
 import turtle
-
 def draw_rectangle(t, x, y, width, height, color):
     t.penup()
     t.goto(x, y)
